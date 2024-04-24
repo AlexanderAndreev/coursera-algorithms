@@ -12,6 +12,7 @@
         <module>percolation</module>
         <module>hello-world</module>
         <module>shared</module>
+        <module>queues</module>
     </modules>
 
     <properties>
