@@ -76,13 +76,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
             this.array = (Item[]) new Object[size];
             System.arraycopy(array, 0, this.array, 0, size);
-            sort();
+            if (size > 1) {
+                shuffle();
+            }
         }
 
-        private void sort() {
+        private void shuffle() {
 
-            for (int i = 0; i < array.length; i++) {
-                int j = StdRandom.uniformInt(size - 1);
+            for (int i = 1; i < array.length; i++) {
+                int j = StdRandom.uniformInt(i);
                 Item temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
