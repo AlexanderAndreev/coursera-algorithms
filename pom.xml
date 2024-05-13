@@ -13,6 +13,7 @@
         <module>hello-world</module>
         <module>shared</module>
         <module>queues</module>
+        <module>collinear</module>
     </modules>
 
     <properties>
